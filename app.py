@@ -119,7 +119,7 @@ with st.container():
         prediction = model.predict(scaled)[0]
         stress_label = encoder.inverse_transform([prediction])[0]
 
-        st.success(f"🤖 ML Predicted Stress Level: **{stress_label}**")
+        
 
         # Suggestions based on Heart Rate stress
         st.subheader("💡 Suggested Actions:")
@@ -127,3 +127,4 @@ with st.container():
             st.write(f"- {tip}")
 
     st.markdown("</div>", unsafe_allow_html=True)
+
